@@ -1,1 +1,14 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
 
+        if len(s) != len(t):
+            return False
+
+        uno = {}
+        dos = {}
+
+        for i in range (len(s)):
+            uno[s[i]] = 1 + uno.get(s[i], 0)
+            dos[t[i]] = 1 + dos.get(t[i], 0)
+
+        return uno == dos
