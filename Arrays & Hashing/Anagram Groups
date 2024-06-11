@@ -1,3 +1,5 @@
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         grupo = defaultdict(list) #crea una valor vacio para las llaves que no existen
         arr =[]
 
