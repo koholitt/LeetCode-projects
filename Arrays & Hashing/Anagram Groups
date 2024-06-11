@@ -1,0 +1,10 @@
+        grupo = defaultdict(list) #crea una valor vacio para las llaves que no existen
+        arr =[]
+
+        for s in strs:
+            arr= [0] *26 #crea un arreglo de 26 espacios
+            for c in s:
+                arr[ord(c) - ord("a")] +=1 #ponse un numero en las letras que tiene la palabra
+            
+            grupo[tuple(arr)].append(s) # tuples -> usa todo un arreglo como llave
+        return grupo.values()
