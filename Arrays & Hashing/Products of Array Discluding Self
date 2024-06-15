@@ -1,0 +1,13 @@
+        arr=[[0] for i in range(len(nums))]
+        cont=0
+
+        if all(n == 0 for n in nums):
+            return [0] * len(nums)
+
+        for i,n in enumerate(nums):
+            res = 1
+            for x,j in enumerate(nums):
+                if i!=x:
+                    res *= j
+            arr[i]=res
+        return arr
