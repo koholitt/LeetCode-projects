@@ -1,3 +1,5 @@
+class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
         colum = defaultdict(set)
         renglon = defaultdict(set)
         cuadro = defaultdict(set) # key = (r/3, c/3)
