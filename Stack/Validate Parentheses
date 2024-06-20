@@ -1,0 +1,14 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        closelist= {")" : "(", "]" : "[", "}" : "{"}
+
+        for i in s:
+            if i not in closelist:
+                stack.append(i)
+                continue
+            if not stack or stack[-1] != closelist[i]:
+                return False
+            stack.pop()
+
+        return not stack
